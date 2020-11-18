@@ -2,9 +2,10 @@ const myList = new Vue ({
   el:'#todoList',
   data:{
     array: [],
+    arrayPref: [],
     inputMother:'',
     imageLogo:'img/boolean.png',
-    backgroundColor: 'lightgreen',
+    changeColor: 'important',
 
   },
   methods:{
@@ -14,13 +15,10 @@ const myList = new Vue ({
     leave: function(del){
       this.array.splice(del , 1 )
     },
-    changeColor: function(a , b){
-      if(a.includes(b)){
-        return {'backgroundColor' : 'green'}
-
-      }
-
+    color: function(){
+    this.changeColor
     }
+
   }
 })
 

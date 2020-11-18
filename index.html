@@ -33,7 +33,7 @@
         </div>
         <div class="col-10 d-flex justify-content-center">
           <ul>
-            <li v-for='(el ,i) in array' @click='changeColor(array , el)'>
+            <li v-for='(el ,i) in array' @click='color' :class="changeColor" >
               {{el}}
               <i class="far fa-times-circle" @click='() => leave(i)'></i>
             </li>
@@ -46,4 +46,3 @@
 <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
-    <div :style="myCustomStyles"><div
