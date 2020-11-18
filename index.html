@@ -28,16 +28,18 @@
       </div>
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
-          <input type="text" v-model='inputMother' name="doc" >
+          <input type="text" v-model='inputMother' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"name="doc" >
           <button type="button" @click='saveInput' class="btn btn-success">Aggiungi</button>
         </div>
-        <div class="col-10 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
           <ul>
-            <li v-for='(el ,i) in array' @click='color' :class="changeColor" >
-              {{el}}
-              <i class="far fa-times-circle" @click='() => leave(i)'></i>
+            <template v-for='(el ,i) in array'>
+            <li @click='el.important = !el.important' class="listStyle" :class="el.important? 'important' : null " >
+              {{el.text}}
             </li>
-
+              <i class="far fa-times-circle " @click='() => leave(i)'></i>
+              <br>
+            </template>
           </ul>
         </div>
       </div>
