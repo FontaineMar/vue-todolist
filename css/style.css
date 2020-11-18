@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.col-12 > img{
+  width: 50%;
+  height:120px;
+}
+.text{
+  margin-top:100px;
+}

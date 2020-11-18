@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- BOOTSTRAP 4.4.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONT-AWESOME 5.10.0-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+     <!-- VUE 2.6.12 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+  </head>
+  <body>
+    <div class="container" id="todoList">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <img :src="imageLogo" alt="logo boolean">
+        </div>
+        <div class="col-12 d-flex justify-content-center text">
+          <h4>Crea la tua lista ed inviala a chi vuoi:</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <input type="text" v-model='inputMother' name="doc" >
+          <button type="button" @click='saveInput' class="btn btn-success">Aggiungi</button>
+        </div>
+        <div class="col-10 d-flex justify-content-center">
+          <ul>
+            <li v-for='(el ,i) in array' @click='changeColor(array , el)'>
+              {{el}}
+              <i class="far fa-times-circle" @click='() => leave(i)'></i>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- script -->
+<script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
+    <div :style="myCustomStyles"><div
